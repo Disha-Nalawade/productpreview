@@ -5,34 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-      .container {
-        width: 600px;
-        height: 400px;
-        object-fit: cover;
-        display: block;
-        margin: 50px auto;
-      }
-      .img5 {
+      #mainimg {
         width: 600px;
         height: 400px;
         border-radius: 20px;
         box-shadow: 2px 3px 10px 3px grey;
+
+        object-fit: cover;
+        display: block;
+        margin: 50px auto;
       }
+
       .img {
         height: 100px;
+        margin: 20px;
+        object-fit: cover;
+        border: 1px solid grey;
+        border-radius: 10px;
       }
       .imgcontainer {
         display: flex;
         justify-content: center;
-        margin: 20px;
-        padding: 20px;
       }
     </style>
   </head>
   <body>
-    <div class="container">
-      <img src="./img/5img.jpg" alt="" class="img5" id="img5" />
-    </div>
+    <img src="./img/5img.jpg" alt="" id="mainimg" />
+
     <div class="imgcontainer">
       <img
         src="./img/1img.jpg"
@@ -46,13 +45,23 @@
         class="img"
         onclick="display('./img/2img.jpg')"
       />
-      <img src="./img/3img.jpg" alt="" class="img" />
-      <img src="./img/4img.jpg" alt="" class="img" />
+      <img
+        src="./img/3img.jpg"
+        alt=""
+        class="img"
+        onclick="display('./img/3img.jpg')"
+      />
+      <img
+        src="./img/4img.jpg"
+        alt=""
+        class="img"
+        onclick="display('./img/4img.jpg')"
+      />
     </div>
     <script>
       function display(image) {
-        const img5 = document.getElementById("img5");
-        img5.scr = image;
+        const mainimgEle = document.getElementById("mainimg");
+        mainimgEle.scr = image;
       }
     </script>
   </body>
