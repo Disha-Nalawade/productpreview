@@ -7,22 +7,53 @@
     <style>
       .container {
         width: 600px;
-        height: 500px;
+        height: 400px;
         object-fit: cover;
-        background-color: aqua;
         display: block;
         margin: 50px auto;
       }
-      .img5{
+      .img5 {
         width: 600px;
         height: 400px;
-        
+        border-radius: 20px;
+        box-shadow: 2px 3px 10px 3px grey;
+      }
+      .img {
+        height: 100px;
+      }
+      .imgcontainer {
+        display: flex;
+        justify-content: center;
+        margin: 20px;
+        padding: 20px;
       }
     </style>
   </head>
   <body>
     <div class="container">
-      <img src="./img/5img.jpg" alt="" class="img5" />
+      <img src="./img/5img.jpg" alt="" class="img5" id="img5" />
     </div>
+    <div class="imgcontainer">
+      <img
+        src="./img/1img.jpg"
+        alt=""
+        class="img"
+        onclick="display('./img/1img.jpg')"
+      />
+      <img
+        src="./img/2img.jpg"
+        alt=""
+        class="img"
+        onclick="display('./img/2img.jpg')"
+      />
+      <img src="./img/3img.jpg" alt="" class="img" />
+      <img src="./img/4img.jpg" alt="" class="img" />
+    </div>
+    <script>
+      function display(image) {
+        const img5 = document.getElementById("img5");
+        img5.scr = image;
+      }
+    </script>
   </body>
 </html>
