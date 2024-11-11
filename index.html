@@ -22,6 +22,7 @@
         object-fit: cover;
         border: 1px solid grey;
         border-radius: 10px;
+        cursor: pointer;
       }
       .imgcontainer {
         display: flex;
@@ -37,31 +38,32 @@
         src="./img/1img.jpg"
         alt=""
         class="img"
-        onclick="display('./img/1img.jpg')"
+        onclick="show('./img/1img.jpg')"
       />
       <img
         src="./img/2img.jpg"
         alt=""
         class="img"
-        onclick="display('./img/2img.jpg')"
+        onclick="show('./img/2img.jpg')"
       />
       <img
         src="./img/3img.jpg"
         alt=""
         class="img"
-        onclick="display('./img/3img.jpg')"
+        onclick="show('./img/3img.jpg')"
       />
       <img
         src="./img/4img.jpg"
         alt=""
         class="img"
-        onclick="display('./img/4img.jpg')"
+        onclick="show('./img/4img.jpg')"
       />
     </div>
     <script>
-      function display(image) {
+      function show(image) {
         const mainimgEle = document.getElementById("mainimg");
-        mainimgEle.scr = image;
+        mainimgEle.src = image;
+        console.log("Hello");
       }
     </script>
   </body>
